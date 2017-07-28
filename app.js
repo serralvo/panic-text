@@ -1,14 +1,28 @@
-var http = require("http");
+const express = require('express')
+const app = express()
 
-http.createServer(function(request, response) {
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get('/', function(req, res, next) {
+  res.send("Hello :D");
+});
+
+app.post('/', function(req, res, next) {
   
   var content = {
       "response_type": "in_channel",
       "text": "Wooowwww"
   }
   
-  response.writeHead(200, {"Content-Type": "text/javascript"});
-  response.write(JSON.stringify(content));
-  response.end();
+  res.header(200, {"Content-Type": "text/javascript"});
+  res.send(JSON.stringify(content));
   
-}).listen(80);
+});
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+})

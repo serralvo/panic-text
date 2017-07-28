@@ -1,0 +1,22 @@
+{
+  "name": "panic-text",
+  "version": "1.0.0",
+  "description": "Just for fun",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serralvo/panic-text.git"
+  },
+  "author": "Fabricio Serralvo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serralvo/panic-text/issues"
+  },
+  "homepage": "https://github.com/serralvo/panic-text#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
