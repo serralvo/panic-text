@@ -1,5 +1,7 @@
-const express = require('express')
-const app = express()
+var express = require('express');
+var app = express();
+
+app.set('port', (process.env.PORT || 5000));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -23,6 +25,6 @@ app.post('/', function(req, res, next) {
   
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
