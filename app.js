@@ -20,7 +20,7 @@ app.post('/', function(req, res, next) {
       "text": "Wooowwww"
   }
   
-  res.header(200, {"Content-Type": "text/javascript"});
+  // res.header(200, {"Content-Type": "text/javascript"});
   res.send(JSON.stringify(content));
   
 });
